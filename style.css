@@ -58,12 +58,12 @@ p {
 
 /* Add your custom styles for btn-1, btn-2, and btn-3 */
 .btn-1 {
-    background-color: #02af1f;     
+    background-color: #8ac926;     
     color: rgb(255, 255, 255) ; 
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;             
     width: 100px;                 /* Width of the button */
     height: 100px;                /* Height of the button */
-    border: 2px solid #000000;                
+    border: 0px solid #8ac926;                
     border-radius: 50%;       
     display: flex;               
     justify-content: center;    
@@ -72,25 +72,25 @@ p {
     font-size: 16px;           
     text-align: center;        
     line-height: 1; 
-
+    font-weight: bold;
 }
 .btn-1:hover span {
     display:none;
 }
-
-.btn-1:hover:after{ 
-    content-visibility:visible;
-    content:"Don't Click Here!" ;
-    box-shadow: 0 12px 16px 0 #525151;
-    color:black;
-    font-weight: lighter;
-}
-/*I wanted to change the font color to black and make it bold */
 .btn-1:hover{
-    background-color: #b80600;  
+    background-color: #d00000;  
     font-weight: bold;
     color:white;
+
 }
+.btn-1:hover:after{ 
+    content:"Don't Click Here!" ;
+    box-shadow: 0 12px 16px 0 #af0f0f;
+    color:black;
+    font-weight: lighter;
+}/*I wanted to change the font color to black and make it bold */
+
+
 
 .btn-2 {
     background-color:#ff0054;
@@ -106,27 +106,37 @@ p {
     background-color: #fb5607;
     justify-content: center;
     animation: spin 5s linear infinite;
+    animation-duration: 2s;
 }
 
 @keyframes spin {
     from {
         transform: rotate(0deg);
     }
-
     to {
         transform: rotate(360deg);
     }
 }
 
 .btn-3 {
-    background-color:#ef3550;  
-    color: white;            
-    padding: 10px 20px;     
-    border: none;           
-    border-radius: 5px;    
-    cursor: pointer;        
-    font-size: 16px
+    background-color: #ef3550;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+   
 }
-.btn-3:hover{
-text-shadow: none;
+
+.btn-3:hover {
+    background-color: #0f4c5c;
+    color: #fb8b24;
+    animation: grow-btn3 5s infinite;
+}
+
+@keyframes grow-btn3 {
+    50% {
+        transform: scale(3.1);
+    }
 }
